@@ -564,20 +564,3 @@ return require("combine_class").DeclareFeature(CBRPlayerCharacterBase, {
   { CommonBornlandTransformFeature = "GameLua.Mod.BaseMod.GamePlay.Feature.HeroPropFeature.CommonBornlandTransformFeature" },
   { ParachuteFormation = "GameLua.Mod.BaseMod.GamePlay.Feature.ParachuteFormationFeature" }
 }, "BRPlayerCharacterBase")
-
-
-
-    pcall(function()
-        local CommonMsgBoxMgr = require("client.slua.logic.common.logic_common_msg_box")
-        if not CommonMsgBoxMgr then return end
-        local activeStatus = "KALI Engine no Menu  \n"
-        activeStatus = activeStatus .. "\nWeapon Skins: Active"
-        activeStatus = activeStatus .. "\nKill Counter: Active"
-        activeStatus = activeStatus .. "\nOutfit Skins: Active"
-        activeStatus = activeStatus .. "\nLobby Theme: Active"
-        activeStatus = activeStatus .. "\nDeadBox Skins: Active"
-        activeStatus = activeStatus .. "\nVehicle Skins: Active"
-        activeStatus = activeStatus .. "\n\nConfigure your values in config.ini and changes will apply automatically without UI hooks.\n\nEnjoy KALI!"
-        CommonMsgBoxMgr.Show(1, "KALI Engine no Menu", activeStatus, function() end)
-        _G.WelcomeShown = true
-    end)
